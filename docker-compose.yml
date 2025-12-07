@@ -1,0 +1,15 @@
+#version: '3.8'
+
+services:
+  api:
+    build: ./fastapi
+    container_name: fastapi_app
+    restart: unless-stopped
+    ports:
+      - "8000:8000"
+    networks:
+      - internal
+
+networks:
+  internal:
+    driver: bridge
