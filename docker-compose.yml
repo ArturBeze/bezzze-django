@@ -104,6 +104,12 @@ services:
     depends_on:
       postgres:
         condition: service_healthy
+      redis:
+        condition: service_started
+      rabbitmq:
+        condition: service_started
+      mongodb:
+        condition: service_started
     networks:
       - internal
     expose:
