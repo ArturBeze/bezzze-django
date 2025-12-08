@@ -9,8 +9,8 @@ services:
       - "8000:8000"
     networks:
       - internal
-#    expose:
-#      - "8000"  # важно: только во внутренней сети
+    expose:
+      - "8000"
 
   postgres:
     image: postgres:15

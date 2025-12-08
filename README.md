@@ -1,12 +1,12 @@
 ReadMe
 
 
-sudo rm /etc/nginx/sites-avilable/bezzze.ru
+sudo rm /etc/nginx/sites-available/bezzze.ru
 
 sudo rm /etc/nginx/sites-enabled/bezzze.ru
 
 
-sudo nano /etc/nginx/sites-avilable/bezzze.ru
+sudo nano /etc/nginx/sites-available/bezzze.ru
 
 sudo nano /etc/nginx/sites-enabled/bezzze.ru
 
