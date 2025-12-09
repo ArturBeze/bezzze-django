@@ -1,41 +1,40 @@
-ReadMe
+# ReadMe
+
+Install certbot and create certificates
+
+    sudo apt update
+
+    sudo apt install certbot python3-certbot-nginx -y
+
+    sudo certbot --nginx -d bezzze.ru -d www.bezzze.ru
+
+    sudo certbot --nginx -d bezzze.ru -d www.bezzze.ru
 
 
-sudo rm /etc/nginx/sites-available/bezzze.ru
+Certificate location
 
-sudo rm /etc/nginx/sites-enabled/bezzze.ru
+    ssl_certificate_key /etc/letsencrypt/live/
 
-
-sudo nano /etc/nginx/sites-available/bezzze.ru
-
-sudo nano /etc/nginx/sites-enabled/bezzze.ru
-
-sudo ln -s /etc/nginx/sites-available/bezzze.ru /etc/nginx/sites-enabled/
-
-
-Fullchain certificate location
-
-    ssl_certificate /etc/letsencrypt/live/bezzze.ru/fullchain.pem;
-
-Privkey certificate location
-
-    ssl_certificate_key /etc/letsencrypt/live/bezzze.ru/privkey.pem;
 
 Check nginx status
 
     sudo systemctl status nginx
 
-Check nginx
+...or
 
     sudo nginx -t
-
-Start nginx
-
-    sudo systemctl start nginx
     
 Stop nginx
 
     sudo systemctl stop nginx
+
+... if don't work
+
+    sudo pkill -f nginx & wait $! sudo systemctl start nginx
+
+Start nginx
+
+    sudo systemctl start nginx
     
 Restart nginx
 
