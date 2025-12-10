@@ -47,3 +47,41 @@ To delete all containers including its volumes
 To delete all the images
 
     docker rmi -f $(docker images -aq)
+
+Create django project
+
+    cd project/django
+    mkdir app
+    cd app
+    django-admin startproject app .
+
+Setup work with PostgreSQL in django/app/app/settings.py
+
+    import os
+
+    SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
+    DEBUG = os.environ.get("DJANGO_DEBUG") == "1"
+    
+    DATABASES = {
+        "default": {
+            "ENGINE": "django.db.backends.postgresql",
+            "NAME": os.environ.get("POSTGRES_DB"),
+            "USER": os.environ.get("POSTGRES_USER"),
+            "PASSWORD": os.environ.get("POSTGRES_PASSWORD"),
+            "HOST": os.environ.get("POSTGRES_HOST"),
+            "PORT": 5432,
+        }
+    }
+    
+    ALLOWED_HOSTS = ["bezzze.ru"]
+
+Create django migration
+
+    docker compose exec django python manage.py migrate
+
+Create django admin
+
+    docker compose exec django python manage.py createsuperuser
+
+
+    
