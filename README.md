@@ -83,5 +83,9 @@ Create django admin
 
     docker compose exec django python manage.py createsuperuser
 
+If error - Error: EACCES: permission denied, mkdir '/home/node/.n8n'
+
+    mkdir -p n8n_data
+    sudo chown -R 1000:1000 n8n_data
 
     
