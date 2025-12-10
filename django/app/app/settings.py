@@ -30,6 +30,7 @@ SECRET_KEY = 'django-insecure-oc6*ggqju6kbthe@sr=t6n3e@p%r#s$!*4s@exc8ed@llv3l-$
 DEBUG = True
 
 ALLOWED_HOSTS = ["bezzze.ru"]
+#ALLOWED_HOSTS = []
 
 
 # Application definition
