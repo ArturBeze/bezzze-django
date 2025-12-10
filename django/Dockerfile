@@ -11,6 +11,10 @@ COPY requirements.txt .
 
 RUN pip install --no-cache-dir --upgrade -r requirements.txt
 
-COPY .. .
+COPY app/ ./app/
 
-CMD ["gunicorn", "project.wsgi:application", "--bind", "0.0.0.0:8000"]
+WORKDIR /app/app
+
+RUN python manage.py collectstatic --noinput || true
+
+CMD ["gunicorn", "app.wsgi:application", "--bind", "0.0.0.0:8000"]
