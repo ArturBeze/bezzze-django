@@ -39,3 +39,11 @@ Start nginx
 Restart nginx
 
     sudo systemctl restart nginx
+
+To delete all containers including its volumes
+
+    docker rm -vf $(docker ps -aq)
+
+To delete all the images
+
+    docker rmi -f $(docker images -aq)
