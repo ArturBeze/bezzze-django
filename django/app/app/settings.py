@@ -13,8 +13,9 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 import os
 from pathlib import Path
 
-SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
-DEBUG = os.environ.get("DJANGO_DEBUG") == "1"
+import mimetypes
+mimetypes.add_type("text/css", ".css", True)
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -24,10 +25,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-oc6*ggqju6kbthe@sr=t6n3e@p%r#s$!*4s@exc8ed@llv3l-$'
+SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
+# SECRET_KEY = 'django-insecure-oc6*ggqju6kbthe@sr=t6n3e@p%r#s$!*4s@exc8ed@llv3l-$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("DJANGO_DEBUG") == "1"
+# DEBUG = True
 
 ALLOWED_HOSTS = ["bezzze.ru"]
 #ALLOWED_HOSTS = []
