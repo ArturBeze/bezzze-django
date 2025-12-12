@@ -13,9 +13,6 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 import os
 from pathlib import Path
 
-import mimetypes
-mimetypes.add_type("text/css", ".css", True)
-
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -32,8 +29,8 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 DEBUG = os.environ.get("DJANGO_DEBUG") == "1"
 # DEBUG = True
 
-ALLOWED_HOSTS = ["bezzze.ru"]
-#ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["bezzze.ru", '127.0.0.1', 'localhost']
+# ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -132,3 +129,5 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATIC_ROOT = BASE_DIR / "staticfiles"
