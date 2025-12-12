@@ -5,5 +5,5 @@ from django.http import HttpResponse
 def main(request):
     return HttpResponse("<h4>main</h4>")
 
-def help(request):
-    return HttpResponse("<h4>help</h4>")
+def about(request):
+    return HttpResponse("<h4>about</h4>")
