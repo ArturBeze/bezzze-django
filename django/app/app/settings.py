@@ -31,8 +31,8 @@ SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
 DEBUG = os.environ.get("DJANGO_DEBUG") == "1"
 # DEBUG = True
 
-print(f"DJANGO_SECRET_KEY {os.environ.get("DJANGO_SECRET_KEY")}")
-print(f"DJANGO_DEBUG {os.environ.get("DJANGO_DEBUG")}")
+# print(f"DJANGO_SECRET_KEY {os.environ.get("DJANGO_SECRET_KEY")}")
+# print(f"DJANGO_DEBUG {os.environ.get("DJANGO_DEBUG")}")
 
 ALLOWED_HOSTS = ["bezzze.ru", '127.0.0.1', 'localhost']
 # ALLOWED_HOSTS = []
