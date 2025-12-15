@@ -1,9 +1,10 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.core.cache import cache
 
 # Create your views here.
-def main(request):
-    return HttpResponse("<h4>news</h4>")
+def news_main(request):
+    return render(request, 'news/index.html')
 
 def foo(request):
     return HttpResponse("<h4>foo</h4>")

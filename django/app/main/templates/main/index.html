@@ -1,3 +1,7 @@
 {% extends 'main/layout.html' %}
 
-{% block body %} <h4>Main</h4> {% endblock %}
+{% block title %}Main{% endblock %}
+{% block body %}
+    <p><h4>Main</h4></p>
+    <p><h4>Amount: {{ amount }}</h4></p>
+{% endblock %}
