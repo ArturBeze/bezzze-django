@@ -3,7 +3,7 @@ from django.utils.deprecation import MiddlewareMixin
 from django_redis import get_redis_connection
 
 ONLINE_USERS_KEY = "online_users"
-USER_TTL = 300  # 5 минут
+USER_TTL = 60
 
 
 class OnlineUsersMiddleware(MiddlewareMixin):
