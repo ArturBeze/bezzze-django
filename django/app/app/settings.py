@@ -40,7 +40,7 @@ REDIS_URL = f"redis://{REDIS_HOST}:{REDIS_PORT}/{REDIS_DB}"
 # print(f"DJANGO_SECRET_KEY {os.environ.get("DJANGO_SECRET_KEY")}")
 # print(f"DJANGO_DEBUG {os.environ.get("DJANGO_DEBUG")}")
 
-ALLOWED_HOSTS = ["bezzze.ru", '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ["bezzze.ru", '85.239.151.12', '127.0.0.1', 'localhost']
 # ALLOWED_HOSTS = []
 
 # Application definition
