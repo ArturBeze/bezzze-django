@@ -169,3 +169,4 @@ cython_debug/
 !/pyproject.toml
 
 !/django/
+/django/app/game/static/game/*

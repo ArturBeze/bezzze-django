@@ -88,4 +88,7 @@ If error - Error: EACCES: permission denied, mkdir '/home/node/.n8n'
     mkdir -p n8n_data
     sudo chown -R 1000:1000 n8n_data
 
-    
+Get html game:
+
+    wget -o myfile.zip https://github.com/AthulDilip/HTML5-Flappy-Bird/archive/refs/heads/master.zip
+    tar -xf .\myfile.zip

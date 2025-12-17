@@ -47,7 +47,7 @@ ALLOWED_HOSTS = ["bezzze.ru", '127.0.0.1', 'localhost']
 
 INSTALLED_APPS = [
     'main',
-    'news',
+    'game',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -145,8 +145,8 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
-    'main/static',
-    'news/static',
+    # 'main/static',
+    # 'game/static',
 ]
 
 
