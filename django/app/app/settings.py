@@ -28,12 +28,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
-# SECRET_KEY = 'django-insecure-oc6*ggqju6kbthe@sr=t6n3e@p%r#s$!*4s@exc8ed@llv3l-$'
+# SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY")
+SECRET_KEY = 'django-insecure-oc6*ggqju6kbthe@sr=t6n3e@p%r#s$!*4s@exc8ed@llv3l-$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DJANGO_DEBUG") == "1"
-# DEBUG = True
+# DEBUG = os.environ.get("DJANGO_DEBUG") == "1"
+DEBUG = True
 
 REDIS_HOST = os.getenv("REDIS_HOST", "redis")
 REDIS_PORT = os.getenv("REDIS_PORT", "6379")
@@ -98,15 +98,15 @@ WSGI_APPLICATION = 'app.wsgi.application'
 
 DATABASES = {
     'default': {
-        # 'ENGINE': 'django.db.backends.sqlite3',
-        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
 
-        "ENGINE": "django.db.backends.postgresql",
-        "NAME": os.environ.get("POSTGRES_DB"),
-        "USER": os.environ.get("POSTGRES_USER"),
-        "PASSWORD": os.environ.get("POSTGRES_PASSWORD"),
-        "HOST": os.environ.get("POSTGRES_HOST"),
-        "PORT": 5432,
+        # "ENGINE": "django.db.backends.postgresql",
+        # "NAME": os.environ.get("POSTGRES_DB"),
+        # "USER": os.environ.get("POSTGRES_USER"),
+        # "PASSWORD": os.environ.get("POSTGRES_PASSWORD"),
+        # "HOST": os.environ.get("POSTGRES_HOST"),
+        # "PORT": 5432,
     }
 }
 
@@ -149,8 +149,8 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
-    'main/static',
-    'game/static',
+    # 'main/static',
+    # 'game/static',
 ]
 
 
