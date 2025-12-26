@@ -13,6 +13,10 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 import os
 from pathlib import Path
 
+import mimetypes
+mimetypes.add_type("application/wasm", ".wasm", True)
+mimetypes.add_type("application/octet-stream", ".data", True)
+
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -145,8 +149,8 @@ STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
     BASE_DIR / "static",
-    # 'main/static',
-    # 'game/static',
+    'main/static',
+    'game/static',
 ]
 
 
@@ -159,3 +163,7 @@ CACHES = {
         }
     }
 }
+
+
+X_FRAME_OPTIONS = 'ALLOWALL'
+# X_FRAME_OPTIONS = 'SAMEORIGIN'

@@ -1,7 +1,10 @@
 {% extends 'game/layout.html' %}
 
-{% block title %}News{% endblock %}
+{% load static %}
+
+{% block title %}Game{% endblock %}
 {% block body %}
+<p>Before iFrame</p>
     <iframe
         src="/static/game/HTML5-Flappy-Bird-master/index.html"
         width="100%"
@@ -9,4 +12,5 @@
         frameborder="0"
         allowfullscreen>
     </iframe>
+<p>After iFrame</p>
 {% endblock %}
